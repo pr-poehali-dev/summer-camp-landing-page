@@ -28,10 +28,10 @@ const HeroSection = () => {
         </div>
 
         {/* Hero Text */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-shadow-sm">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
           Летний городской лагерь
         </h1>
-        <p className="text-xl sm:text-2xl mb-6 max-w-2xl mx-auto text-shadow-sm">
+        <p className="text-xl sm:text-2xl mb-6 max-w-2xl mx-auto">
           Незабываемое лето для детей от 7 до 14 лет, наполненное яркими впечатлениями, 
           новыми друзьями и интересными занятиями
         </p>
