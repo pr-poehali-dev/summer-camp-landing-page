@@ -38,18 +38,28 @@ const testimonials = [
     quote: "Сыну 13 лет, и найти что-то интересное для подростка непросто. Но ваш лагерь его действительно увлек! Особенно понравились командные проекты и спортивные соревнования. Ребенок доволен, а это главное!",
     role: "Отец Кирилла, 13 лет"
   },
+  {
+    id: 5,
+    name: "Марина Сидорова",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=120&q=80",
+    quote: "Спасибо за незабываемое лето! Дочка каждый день бежала в лагерь с удовольствием. Ваши педагоги смогли найти подход к каждому ребенку, а разнообразие занятий просто впечатляет.",
+    role: "Мама Алисы, 10 лет"
+  },
 ];
 
 const ReviewsSection = () => {
   return (
-    <section className="py-16 bg-gray-50" id="reviews">
+    <section className="py-20 bg-gray-50" id="reviews">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Отзывы родителей</h2>
-          <div className="w-20 h-1 bg-purple-500 mx-auto"></div>
+        <div className="text-center mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Отзывы родителей</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            Что говорят родители о нашем лагере
+          </p>
+          <div className="w-20 h-1 bg-purple-500 mx-auto mt-4"></div>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <Carousel
             opts={{
               align: "start",
@@ -60,21 +70,21 @@ const ReviewsSection = () => {
             <CarouselContent>
               {testimonials.map((testimonial) => (
                 <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3 pl-6">
-                  <div className="h-full p-6 bg-white rounded-xl shadow-md flex flex-col">
-                    <div className="flex items-center mb-4">
+                  <div className="h-full p-8 bg-white rounded-xl shadow-md flex flex-col transition-shadow duration-300 hover:shadow-lg">
+                    <div className="flex items-center mb-6">
                       <img 
                         src={testimonial.avatar} 
                         alt={testimonial.name} 
-                        className="w-12 h-12 rounded-full mr-4 object-cover"
+                        className="w-14 h-14 rounded-full mr-4 object-cover border-2 border-purple-200"
                       />
                       <div>
-                        <h3 className="font-medium text-gray-900">{testimonial.name}</h3>
+                        <h3 className="font-medium text-lg text-gray-900">{testimonial.name}</h3>
                         <p className="text-sm text-gray-500">{testimonial.role}</p>
                       </div>
                     </div>
                     
-                    <div className="mb-4 flex-grow">
-                      <Icon name="Quote" className="h-6 w-6 text-purple-400 mb-2" />
+                    <div className="mb-6 flex-grow">
+                      <Icon name="Quote" className="h-8 w-8 text-purple-300 mb-3" />
                       <p className="text-gray-600 italic">{testimonial.quote}</p>
                     </div>
                     
@@ -89,9 +99,9 @@ const ReviewsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center mt-8">
-              <CarouselPrevious className="relative static left-0 right-auto translate-y-0 mr-2" />
-              <CarouselNext className="relative static right-0 left-auto translate-y-0" />
+            <div className="flex justify-center mt-10">
+              <CarouselPrevious className="relative static left-0 right-auto translate-y-0 mr-2 bg-purple-600 text-white border-purple-600 hover:bg-purple-700 hover:border-purple-700" />
+              <CarouselNext className="relative static right-0 left-auto translate-y-0 bg-purple-600 text-white border-purple-600 hover:bg-purple-700 hover:border-purple-700" />
             </div>
           </Carousel>
         </div>

@@ -20,7 +20,7 @@ const HeroSection = () => {
         <div className="mb-8 flex justify-center">
           <div className="bg-white p-4 rounded-full shadow-lg">
             <img 
-              src="/logo-b.svg" 
+              src="/public/logo-b.svg" 
               alt="Логотип лагеря" 
               className="h-16 sm:h-20"
             />
@@ -28,10 +28,10 @@ const HeroSection = () => {
         </div>
 
         {/* Hero Text */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
           Летний городской лагерь
         </h1>
-        <p className="text-xl sm:text-2xl mb-6 max-w-2xl mx-auto">
+        <p className="text-xl sm:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md">
           Незабываемое лето для детей от 7 до 14 лет, наполненное яркими впечатлениями, 
           новыми друзьями и интересными занятиями
         </p>
@@ -39,9 +39,9 @@ const HeroSection = () => {
         {/* CTA Button */}
         <Button 
           size="lg" 
-          className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 text-lg h-auto"
+          className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 text-lg h-auto shadow-lg transition-all hover:translate-y-[-2px]"
         >
-          Оставить заявку <Icon name="ArrowRight" className="ml-2 h-5 w-5" />
+          Связаться с нами <Icon name="ArrowRight" className="ml-2 h-5 w-5" />
         </Button>
       </div>
     </section>
